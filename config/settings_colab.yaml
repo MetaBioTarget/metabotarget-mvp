@@ -1,0 +1,11 @@
+# Colab-Optimized Configuration Overrides
+environment: colab
+log_level: INFO
+
+cache:
+  directory: /content/metabotarget_cache
+  allow_offline_fallback: true
+
+simulation:
+  default_cohort_size: 100
+  default_dose_mg: 10.0

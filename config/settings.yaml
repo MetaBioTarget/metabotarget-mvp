@@ -1,0 +1,33 @@
+# MetaBioTarget Configuration Settings
+environment: production
+log_level: INFO
+
+# Cache configuration
+cache:
+  directory: data/cache
+  default_ttl_seconds: 604800 # 7 days
+  allow_offline_fallback: true
+
+# Upstream Public APIs
+apis:
+  uniprot: https://rest.uniprot.org/uniprotkb
+  opentargets_graphql: https://api.platform.opentargets.org/api/v4/graphql
+  rcsb_pdb: https://data.rcsb.org/rest/v1/core/entry
+  hpa: https://www.proteinatlas.org
+  gtex: https://gtexportal.org/api/v2/expression/geneExpression
+  chembl: https://www.ebi.ac.uk/chembl/api/data
+  reactome: https://reactome.org/ContentService
+  ensembl: https://rest.ensembl.org/lookup/symbol/homo_sapiens
+
+# Layer 1 Defaults
+layer1:
+  default_probability_threshold: 0.45
+  max_indications_evaluated: 25
+  film_hidden_dim: 16
+  meta_learning_inner_steps: 3
+
+# Simulation Defaults
+simulation:
+  default_cohort_size: 150
+  default_dose_mg: 10.0
+  default_interval_hours: 168.0
